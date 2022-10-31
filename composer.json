@@ -1,0 +1,25 @@
+{
+    "name": "unionco/craft-cloudconvert",
+    "description": "CloudConvert Thumbnail API integration for Craft CMS",
+    "type": "craft-plugin",
+    "license": "MIT",
+    "version": "1.0.0",
+    "autoload": {
+        "psr-4": {
+            "unionco\\cloudconvert\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Abry Rath",
+            "email": "abry.rath@union.co"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.1.0"
+    },
+    "extra": {
+        "name": "CloudConvert",
+        "handle": "cloudconvert"
+    }
+}
