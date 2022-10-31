@@ -10,22 +10,23 @@ use GuzzleHttp\Client;
 use craft\helpers\Json;
 use craft\base\Component;
 use craft\elements\Asset;
-use craft\helpers\Assets as AssetsHelper;
-use craft\feedme\helpers\AssetHelper;
 use craft\helpers\FileHelper;
+use craft\helpers\ArrayHelper;
 use craft\queue\QueueInterface;
 use unionco\cloudconvert\Plugin;
 use yii\base\InvalidConfigException;
+use craft\feedme\helpers\AssetHelper;
 use Psr\Http\Message\ResponseInterface;
+use craft\helpers\Assets as AssetsHelper;
 use GuzzleHttp\Exception\ClientException;
+use unionco\cloudconvert\models\Settings;
 use unionco\cloudconvert\models\api\requests\AbstractRequest;
 use unionco\cloudconvert\models\api\requests\CreateJobRequest;
-use unionco\cloudconvert\models\api\responses\ThumbnailResponse;
 use unionco\cloudconvert\models\api\requests\WaitForTaskRequest;
 use unionco\cloudconvert\models\api\responses\ShowATaskResponse;
+use unionco\cloudconvert\models\api\responses\ThumbnailResponse;
 use unionco\cloudconvert\models\api\requests\ImportFromUrlRequest;
 use unionco\cloudconvert\models\api\requests\CreateThumbnailRequest;
-use unionco\cloudconvert\models\Settings;
 
 class CloudConvert extends Component
 {
@@ -146,7 +147,7 @@ class CloudConvert extends Component
         if (!$folders) {
             throw new RuntimeException('No folders found matching criteria');
         }
-        $folder = $folders[0];
+        $folder = ArrayHelper::firstValue($folders);
         if (is_null($folder)) {
             throw new InvalidConfigException('Asset volume folder not found');
         }
