@@ -1,6 +1,8 @@
 # Craft CloudConvert
 Thumbnail integration via CloudConvert for Craft CMS 3 & 4
 
+_This plugin is still in development and should not be used in production_
+
 ## Versions and Compatibility
 * 1.x.x -> Craft CMS 3
 * 2.x.x -> Craft CMS 4
@@ -26,8 +28,6 @@ Each config option is documented in `vendor/unionco/craft-cloudconvert/src/model
 # Usage
 * This plugin provides an interface for generating a thumbnail from a Craft Asset element. How you would like to hook it up with your CMS and business logic is up to you.
 * *This plugin will not automatically do anything unless explicitly configured to do so by you*
-
-
 
 # API
 `CloudConvert` Service

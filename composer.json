@@ -3,7 +3,7 @@
     "description": "CloudConvert Thumbnail API integration for Craft CMS",
     "type": "craft-plugin",
     "license": "MIT",
-    "version": "1.0.0",
+    "version": "0.1.0",
     "autoload": {
         "psr-4": {
             "unionco\\cloudconvert\\": "src/"
