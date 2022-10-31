@@ -16,10 +16,17 @@
         }
     ],
     "require": {
-        "craftcms/cms": "^3.1.0"
+        "craftcms/cms": "^3.1.0",
+        "craftcms/feed-me": "^4"
     },
     "extra": {
         "name": "CloudConvert",
         "handle": "cloudconvert"
+    },
+    "config": {
+        "allow-plugins": {
+            "yiisoft/yii2-composer": true,
+            "craftcms/plugin-installer": true
+        }
     }
 }
