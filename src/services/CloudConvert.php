@@ -142,8 +142,8 @@ class CloudConvert extends Component
         /** @var int|null */
         $folderUid = $settings->thumbnailFolderUid;
         $folder = Craft::$app->getAssets()->getFolderByUid($folderUid);
-        if (is_null($folderId)) {
-            throw new InvalidConfigException('No folderId specified');
+        if (is_null($folder)) {
+            throw new InvalidConfigException('Asset volume folder not found');
         }
         $folderId = $folder->id;
 
