@@ -161,6 +161,7 @@ class CloudConvert extends Component
         $filename = AssetsHelper::prepareAssetName($filename, true);
         $fetchedImage = $tempThumbnailPath . $filename;
 
+        @unlink($fetchedImage);
         AssetHelper::downloadFile($url, $fetchedImage);
 
         $asset = new Asset();
@@ -174,6 +175,7 @@ class CloudConvert extends Component
         $asset->validate();
         Craft::$app->getElements()->saveElement($asset, false);
 
+        @unlink($fetchedImage);
         $this->log("Asset saved: " . $asset->id);
 
         return $asset;
