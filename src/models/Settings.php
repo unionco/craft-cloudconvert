@@ -30,9 +30,10 @@ class Settings extends Model
     public bool $enabled = false;
 
     /**
-     * @var string
+     * See Assets.php (Assets service), _applyFolderConditions()
+     * @var array
      */
-    public $thumbnailFolderUid = '';
+    public $thumbnailFolderCriteria = [];
 
     /**
      * Width for the generated thumbnail

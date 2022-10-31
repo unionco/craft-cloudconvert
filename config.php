@@ -13,7 +13,7 @@ return [
         'apiKey' => App::env('CC_API_KEY'),
         'sandbox' => (bool) App::env('CC_SANDBOX'),
         'enabled' => (bool) App::env('CC_ENABLED') ?: false,
-        'thumbnailFolderUid' => '',
+        'thumbnailFolderCriteria' => [],
         'thumbnailWidth' => 300,
         'thumbnailHeight' => 300,
         'thumbnailFit' => 'crop',

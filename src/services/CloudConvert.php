@@ -139,9 +139,14 @@ class CloudConvert extends Component
 
         /** @var Settings */
         $settings = Plugin::getInstance()->getSettings();
-        /** @var int|null */
-        $folderUid = $settings->thumbnailFolderUid;
-        $folder = Craft::$app->getAssets()->getFolderByUid($folderUid);
+        /** @var array */
+        $folderCriteria = $settings->thumbnailFolderCriteria;
+
+        $folders = Craft::$app->getAssets()->findFolders($folderCriteria);
+        if (!$folders) {
+            throw new RuntimeException('No folders found matching criteria');
+        }
+        $folder = $folders[0];
         if (is_null($folder)) {
             throw new InvalidConfigException('Asset volume folder not found');
         }
