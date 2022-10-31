@@ -151,7 +151,7 @@ class CloudConvert extends Component
         }
 
         $filename = AssetsHelper::prepareAssetName($filename, true);
-        $fetchedImage = $tempFeedMePath . $filename;
+        $fetchedImage = $tempThumbnailPath . $filename;
 
         AssetHelper::downloadFile($url, $fetchedImage);
 

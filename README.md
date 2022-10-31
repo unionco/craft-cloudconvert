@@ -18,7 +18,7 @@ Each config option is documented in `vendor/unionco/craft-cloudconvert/src/model
 
 ## Configuration
 * `apiKey` - (`string`) The CloudConvert API key. You must create your own CloudConvert account and generate your own API key.
-* `thumbnailFolderId` - (`int`) Volume Folder ID where generating thumbnails should be stored.
+* `thumbnailFolderId` - (`int`) Volume Folder ID where generated thumbnails should be stored.
 * `sandbox` - (`bool`) Should CloudConvert operate in Sandbox mode?
 * `enabled` - (`bool`) Should this plugin be enabled in this environment?
 * `thumbnailWidth` - (`int`) Defaults to 300
