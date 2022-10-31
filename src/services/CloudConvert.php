@@ -140,7 +140,8 @@ class CloudConvert extends Component
         /** @var Settings */
         $settings = Plugin::getInstance()->getSettings();
         /** @var int|null */
-        $folderId = $settings->thumbnailFolderId;
+        $folderUid = $settings->thumbnailFolderUid;
+        $folderId = Craft::$app->getAssets()->getFolderByUid($folderUid);
         if (is_null($folderId)) {
             throw new InvalidConfigException('No folderId specified');
         }

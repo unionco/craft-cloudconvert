@@ -30,9 +30,9 @@ class Settings extends Model
     public bool $enabled = false;
 
     /**
-     * @var int|null
+     * @var string
      */
-    public $thumbnailFolderId = null;
+    public $thumbnailFolderUid = '';
 
     /**
      * Width for the generated thumbnail
